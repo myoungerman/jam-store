@@ -14,7 +14,7 @@
       <a href="index.html">
         <img
           src="./images/logo_header_white.png"
-          alt="Logo"
+          alt="A jar of jam labeled 'Jamn Good Jelly'"
           name="logo"
           class="nav-logo"
       /></a>
@@ -32,118 +32,79 @@
           <span class="badge">1</span>
         </div>
       </nav>
-      <p class="mobile-menu-btn" onclick="toggleMenu()">Menu</p>
-      <div class="triangle-up"></div>
-      <form class="shopping-cart-dropdown">
-        <div class="cart-summary">
-          <p class="cart-header">Cart</p>
-          <div class="total-price">
-            <p>Total:</p>
-            <p>$35.50</p>
-          </div>
-          <button class="checkout-btn">Checkout</button>
-        </div>
-        <div class="cart-item-list">
-          <p class="cart-header">Items</p>
-          <ul>
-            <!--             <li class="cart-item__0">
-              <p class="name">Salmonberry Jam</p>
-              <p class="delete-btn">x</p>
-              <div class="item-container">
-                <img
-                  src="https://via.placeholder.com/60x60.png"
-                  class="item-image"
-                />
-                <div class="item-details">
-                  <div class="item-price-div">
-                    <p>Price:</p>
-                    <p class="price">$0.00</p>
-                  </div>
-                  <div class="item-quantity-div">
-                    <p>Qty:</p>
-                    <p class="quantity">1</p>
-                    <p class="cart-quantity-btn cart-dec-btn">-</p>
-                    <p class="cart-quantity-btn cart-inc-btn">+</p>
-                  </div>
-                </div>
-              </div>
-            </li> -->
-          </ul>
-        </div>
-      </form>
     </header>
-    <div id="home-container">
-      <h2 class="home-page-header tagline">
-        Homemade jam, picked just for you.
-      </h2>
-      <ul class="featured-products">
-        <li>
-          <!-- <img src="https://via.placeholder.com/215x177.png" /> -->
-          <!-- Temporarily commented out so I can work on the mobile design. -->
-          <img
-            src="https://via.placeholder.com/90x90.png"
-            class="mobile-img hidden"
-          />
-          <div class="black-background">
-            <p class="featured-product-name">Huckleberry Jam</p>
-            <p class="featured-product-price">8 oz jar | 10</p>
-          </div>
-        </li>
-        <li>
-          <!-- <img src="https://via.placeholder.com/215x177.png" /> -->
-          <!-- Same as above. -->
-          <img
-            src="https://via.placeholder.com/90x90.png"
-            class="mobile-img hidden"
-          />
-          <div class="black-background">
-            <p class="featured-product-name">%PRODUCTNAME%</p>
-            <p class="featured-product-price">%PRODUCTPRICE%</p>
-          </div>
-        </li>
-        <li>
-          <img src="https://via.placeholder.com/215x177.png" />
-          <div class="black-background">
-            <p class="featured-product-name">%PRODUCTNAME%</p>
-            <p class="featured-product-price">%PRODUCTPRICE%</p>
-          </div>
-        </li>
-      </ul>
-      <h2 class="home-page-header">What sets us apart</h2>
-      <ul class="company-values">
-        <li>
-          <img src="https://via.placeholder.com/130x130.png" />
-          <div class="company-value-text">
-            <h3>Ingredients</h3>
-            <p>
-              Our jams are 100% natural, containing no artificial sweeteners or
-              preservatives, including high fructose corn syrup.
-            </p>
-          </div>
-        </li>
-        <li>
-          <img src="https://via.placeholder.com/130x130.png" />
-          <div class="company-value-text">
-            <h3>Care</h3>
-            <p>
-              Each jar of jam you buy has been handmade by us for you. Unlike
-              large factories that mass produce jams, we get hands on with our
-              product to ensure it looks and tastes wonderful.
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <main id="home-container">
+      <section id="company-overview">
+        <p>We're a husband and wife duo dedicated to offering quality jam at an affordable price. We pick the berries ourselves in the mountains of the Northwest, then ship the jam directly to your door!</p>
+      </section>
+      <section id="products">
+        <h2 class="home-page-header tagline">
+          Featured products
+        </h2>
+        <ul class="featured-products">
+          <li>
+            <img
+              src="https://placehold.co/215x130"
+              alt="A jar of huckleberry jam."
+            />
+            <div class="black-background">
+              <p class="featured-product-name">Huckleberry Jam</p>
+              <p class="featured-product-price">8 oz jar | 10</p>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/215x130"
+              alt="A jar of raspberry jam."
+            />
+            <div class="black-background">
+              <p class="featured-product-name">Raspberry Jam</p>
+              <p class="featured-product-price">8 oz jar | 10</p>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/215x130"
+              alt="A jar of salmonberry jam."
+            />
+            <div class="black-background">
+              <p class="featured-product-name">Salmonberry Jam</p>
+              <p class="featured-product-price">8 oz jar | 10</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="company-details">
+        <h2 class="home-page-header">What sets us apart</h2>
+        <ul class="company-values">
+          <li>
+            <img
+              src="https://placehold.co/130x130.png"
+              alt="A bottle labeled 'artificial sweeteners' overlaid with a red x."/>
+            <div class="company-value-text">
+              <h3>Ingredients</h3>
+              <p>
+                Our jams are 100% natural, containing no artificial sweeteners or
+                preservatives, including high fructose corn syrup.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://placehold.co/130x130.png"
+              alt="Boiling jam being strained through a cheesecloth into a mason jar."
+              />
+            <div class="company-value-text">
+              <h3>Care</h3>
+              <p>
+                Each jar of jam you buy has been handmade by us for you. Unlike
+                large factories that mass produce jams, we get hands on with our
+                product to ensure it looks and tastes wonderful.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
-
-<script>
-  function toggleMenu() {
-    var nav = document.getElementById("nav-main");
-    if (nav.style.visibility === "visible") {
-      nav.style.visibility = "hidden";
-    } else {
-      nav.style.visibility = "visible";
-    }
-  }
-</script>
