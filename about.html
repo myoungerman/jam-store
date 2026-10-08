@@ -20,7 +20,7 @@
       /></a>
       <h1><a href="index.html">Jamn Good Jelly</a></h1>
       <nav id="nav-main">
-        <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <button class="mobile-menu-btn" onclick="toggleMenu()" type="button" aria-expanded="false" aria-controls="links">
           <img
             src="images/hamburger.svg"
             alt="Menu button"
@@ -38,7 +38,6 @@
               class="shopping-cart-logo"
             />
           </button>
-          <span class="badge">1</span>
         </div>
       </nav>
     </header>
@@ -66,11 +65,14 @@
 <script>
   function toggleMenu() {
     const links = document.getElementById("links");
+    const button = document.querySelector(".mobile-menu-btn");
     let linksStyle = getComputedStyle(links)
     if (linksStyle.display === "none") {
       links.style.display = "block";
+      button.setAttribute("aria-expanded", "true");
     } else {
       links.style.display = "none";
+      button.setAttribute("aria-expanded", "false");
     }
   }
 </script>

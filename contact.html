@@ -20,7 +20,7 @@
       /></a>
       <h1><a href="index.html">Jamn Good Jelly</a></h1>
       <nav id="nav-main">
-        <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <button class="mobile-menu-btn" onclick="toggleMenu()" type="button" aria-expanded="false" aria-controls="links">
           <img
             src="images/hamburger.svg"
             alt="Menu button"
@@ -38,7 +38,6 @@
               class="shopping-cart-logo"
             />
           </button>
-          <span class="badge">1</span>
         </div>
       </nav>
     </header>
@@ -53,14 +52,14 @@
                     <h3>Email</h3>
                     <div class="contact-row">
                         <img src="images/email.svg" alt="Email icon">
-                        <p>jamngoodjelly@gmail.com</p>
+                        <a href="mailto:jamngoodjelly@gmail.com">jamngoodjelly@gmail.com</a>
                     </div>
                 </li>
                 <li>
                     <h3>Phone</h3>
                     <div class="contact-row">
                         <img src="images/phone.svg" alt="Phone icon">
-                        <p>(444) 123-4567</p>
+                        <a href="tel:+14441234567">(444) 123-4567</a>
                     </div>
                 </li>
             </ul>
@@ -72,11 +71,14 @@
 <script>
   function toggleMenu() {
     const links = document.getElementById("links");
+    const button = document.querySelector(".mobile-menu-btn");
     let linksStyle = getComputedStyle(links)
     if (linksStyle.display === "none") {
       links.style.display = "block";
+      button.setAttribute("aria-expanded", "true");
     } else {
       links.style.display = "none";
+      button.setAttribute("aria-expanded", "false");
     }
   }
 </script>
