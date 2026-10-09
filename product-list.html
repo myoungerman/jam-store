@@ -19,8 +19,8 @@
           class="nav-logo"
       /></a>
       <h1><a href="index.html">Jamn Good Jelly</a></h1>
-      <nav id="nav-main">
-        <button class="mobile-menu-btn" onclick="toggleMenu()" type="button" aria-expanded="false" aria-controls="links">
+      <nav id="nav-main" aria-label="Main navigation">
+        <button class="mobile-menu-btn" onclick="toggleMenu()" type="button" aria-expanded="false" aria-controls="links" aria-label="Open site menu">
           <img
             src="images/hamburger.svg"
             alt="Menu button"
@@ -87,11 +87,16 @@
               <h3 class="product-name">Pear Jam</h3>
         </article>
       </div>
+      <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="Product image preview">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
     </main>
   </body>
 </html>
 
 <script>
+
   function toggleMenu() {
     const links = document.getElementById("links");
     const button = document.querySelector(".mobile-menu-btn");
@@ -103,5 +108,32 @@
       links.style.display = "none";
       button.setAttribute("aria-expanded", "false");
     }
+  }
+
+  grid = document.querySelector('.grid-container');
+  grid.addEventListener('click', (e) => {
+    el = e.target;
+    if (el.tagName == 'IMG') {
+      image = el.getAttribute('src');
+      expandImage(image);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    imageModalDisplay = document.getElementById("imageModal").style.display;
+
+    // Lets users close the image using just their keyboard (useful for screenreaders)
+    if (e.keyCode == 27 && imageModalDisplay == "flex") {
+        closeImage();
+    }
+  });
+
+  function expandImage(image) {
+    document.getElementById("modalImage").src = image;
+    document.getElementById("imageModal").style.display = "flex";
+  }
+
+  function closeImage() {
+      document.getElementById("imageModal").style.display = "none";
   }
 </script>

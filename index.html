@@ -19,8 +19,8 @@
           class="nav-logo"
       /></a>
       <h1><a href="index.html">Jamn Good Jelly</a></h1>
-      <nav id="nav-main">
-        <button class="mobile-menu-btn" onclick="toggleMenu()" type="button" aria-expanded="false" aria-controls="links">
+      <nav id="nav-main" aria-label="Main navigation">
+        <button class="mobile-menu-btn" onclick="toggleMenu()" type="button" aria-expanded="false" aria-controls="links" aria-label="Open site menu">
           <img
             src="images/hamburger.svg"
             alt="Menu button"
@@ -116,6 +116,14 @@
           </li>
         </ul>
       </section>
+      <section id="faq">
+        <h2 class="home-page-header">Frequently Asked Questions</h2>
+        <ul id="faq-list">
+          <li id="question-one">Q: How long will jam last once I've opened it?</li>
+          <li id="question-two">Q: When was Jamn Good Jelly founded?</li>
+          <li id="question-three">Q: What're some of your favorite recipes that use jam?</li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
@@ -133,6 +141,33 @@
       links.style.display = "none";
       links.setAttribute("aria-hidden", "true");
       button.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  const list = document.getElementById('faq-list');
+  list.addEventListener('click', (e) => {
+    id = e.target.getAttribute('id');
+    showAnswer(id);
+
+  });
+
+  function showAnswer(id) {
+    try {
+      el = document.getElementById(id);
+      console.log(el);
+      switch (id) {
+        case "question-one":
+          el.textContent = "Q: How long will jam last once I've opened it? A: About 5 days."
+          break;
+        case "question-two":
+          el.textContent = "Q: When was Jamn Good Jelly founded? A: In 2020."
+          break;
+        case "question-three":
+          el.textContent = "Q: What're some of your favorite recipes that use jam? A: Coffee cake and jam tarts!"
+          break;
+      }
+    } catch (error) {
+      console.log(`Couldn't find element with ID of ${id}, error was ${error}`);
     }
   }
 </script>
